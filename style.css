@@ -8,8 +8,6 @@ body{
 }
 section{
     display: flex;
-    overflow: hidden;
-    border-radius: 10px;
     color: hsla(0, 0%, 100%, 0.75);
     width: 50%;
     margin: 50px auto auto auto;
@@ -26,12 +24,16 @@ section>div>h1{
     font-weight: 700;
 }
 .sedans{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     background-color:hsl(31, 77%, 52%);
 }
 .suvs{
     background-color: hsl(184, 100%, 22%);
 }
 .luxury{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: hsl(179, 100%, 13%);
 }
 button{
@@ -61,9 +63,21 @@ button:hover{
 
 /*DESIGN PARA CELULAR*/
 
-@media (max-width:367px) {
+@media (max-width:375px) {
     section{
         flex-direction: column;
         width: 80%;
+    }
+    .sedans{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        background-color:hsl(31, 77%, 52%);
+    }
+    .luxury{
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: hsl(179, 100%, 13%);
     }
 }

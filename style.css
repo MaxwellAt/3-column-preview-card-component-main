@@ -63,7 +63,7 @@ button:hover{
 
 /*DESIGN PARA CELULAR*/
 
-@media (max-width:375px) {
+@media (max-width:500px) {
     section{
         flex-direction: column;
         width: 80%;

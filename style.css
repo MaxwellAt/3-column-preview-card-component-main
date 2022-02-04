@@ -1,47 +1,52 @@
 *{
-    border:0;
-    margin:0;
+    margin:0;      
+    padding: 0;
+    box-sizing: border-box;/*border-box tells the browser to account for any border and padding in the values you specify for an element's width and height.  */
 }
 body{
     background-color:hsl(0, 0%, 95%);
     font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-section{
+.section{
     display: flex;
     color: hsla(0, 0%, 100%, 0.75);
     width: 50%;
     margin: 50px auto auto auto;
+    border-radius: 12rem;
 }
-section>div{
+.section>div{
     text-align: start;
     font-family: 'Lexend Deca', sans-serif;
     padding: 40px;
 }
-section>div>h1{
+.section>div>h1{
     color: hsl(0, 0%, 95%);
     margin: 30px 0px 30px 0px;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 700;
 }
 .sedans{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    overflow: hidden;
     background-color:hsl(31, 77%, 52%);
 }
 .suvs{
     background-color: hsl(184, 100%, 22%);
 }
 .luxury{
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    overflow: hidden;
     background-color: hsl(179, 100%, 13%);
 }
-button{
-    margin: 20% 0% 5% 0%;
-    padding: 10px 30px 10px 30px;
+.button{
+    padding: 1rem 2rem 1rem 2rem;
     border-radius: 40px;
     font-family: 'Lexend Deca', sans-serif;
     font-weight:400;
+    background-color: aliceblue;    
 }
 .orange{
     color: hsl(31, 77%, 52%);
@@ -52,10 +57,23 @@ button{
 .veryDarkcyan{
     color: hsl(179, 100%, 13%);
 }
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important; 
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            
+}
 
 /*hover*/
 
-button:hover{
+.button:hover{
     background-color:transparent;
     color: hsl(0, 0%, 95%);
     border: hsl(0, 0%, 95%) 1px solid;
@@ -64,20 +82,18 @@ button:hover{
 /*DESIGN PARA CELULAR*/
 
 @media (max-width:500px) {
-    section{
+    .section{
         flex-direction: column;
         width: 80%;
+        border-radius: 1rem;
     }
     .sedans{
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 0px;
+        overflow:hidden;
+
         background-color:hsl(31, 77%, 52%);
     }
     .luxury{
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
+        overflow:hidden;
         background-color: hsl(179, 100%, 13%);
     }
 }
